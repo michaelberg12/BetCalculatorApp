@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Bet Calc</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Calculator</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="options">Options</string>
+    <string name="freebet">Freebet</string>
+    <string name="large_decimal_odds">Large Decimal Odds</string>
+    <string name="bet_info">Bet Info</string>
+    <string name="results">Results</string>
+    <string name="odds_b">Odds B</string>
+    <string name="odds_a">Odds A</string>
+    <string name="profit">Profit:</string>
+    <string name="winnings">Winnings:</string>
+    <string name="wager_b">Wager B:</string>
+    <string name="wager_a">Wager A</string>
+
+    //TODO Add hints here
+    <string name="odds_b_hint">TODO HINT</string>
+    <string name="odds_a_hint">TODO HINT</string>
+    <string name="wager_a_hint">TODO HINT</string>
+</resources>
