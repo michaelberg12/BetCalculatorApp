@@ -2,7 +2,6 @@ package com.csci448.bet_calc
 
 import android.os.Bundle
 import android.view.Menu
-import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -34,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.calc_home, R.id.nav_gallery, R.id.nav_slideshow
+                R.id.nav_calc_home, R.id.nav_history, R.id.nav_live_bets
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
