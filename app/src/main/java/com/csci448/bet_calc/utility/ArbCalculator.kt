@@ -1,11 +1,13 @@
 package com.csci448.bet_calc.utility
 
+import android.content.Context
 import android.os.Bundle
+import com.csci448.bet_calc.R
 import java.lang.Exception
 
 object ArbCalculator {
 
-    fun calculateArb(oddsA: Double, oddsB: Double, wagerA: Double = 1.0, decimal_override:Boolean = false, freebet:Boolean = false): Bundle {
+    fun calculateArb(oddsA: Double, oddsB: Double, wagerA: Double = 1.0, decimal_override:Boolean, freebet:Boolean, context: Context): Bundle {
 
         var oddsAMut = oddsA
         var oddsBMut = oddsB
@@ -28,14 +30,14 @@ object ArbCalculator {
         val returnBundle  = Bundle()
         if (!freebet) {
             val winnings = oddsAMut * wagerA
-            returnBundle.putDouble("winnings", winnings)
-            returnBundle.putDouble("wager", winnings / oddsBMut)
 
+            returnBundle.putDouble(context.resources.getString(R.string.winningsCalcBundle), winnings)
+            returnBundle.putDouble(context.resources.getString(R.string.wagerCalcBundle), winnings / oddsBMut)
             return returnBundle
         }
         val winnings = (oddsAMut * wagerA) - wagerA
-        returnBundle.putDouble("winnings", winnings)
-        returnBundle.putDouble("wager", winnings / oddsBMut)
+        returnBundle.putDouble(context.resources.getString(R.string.winningsCalcBundle), winnings)
+        returnBundle.putDouble(context.resources.getString(R.string.wagerCalcBundle), winnings / oddsBMut)
 
         return returnBundle
     }
