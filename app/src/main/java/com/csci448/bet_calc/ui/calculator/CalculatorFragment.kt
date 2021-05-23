@@ -1,27 +1,24 @@
-package com.csci448.bet_calc.ui.home
+package com.csci448.bet_calc.ui.calculator
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.csci448.bet_calc.R
 import com.csci448.bet_calc.databinding.FragmentHomeBinding
 
-class HomeFragment : Fragment() {
+class CalculatorFragment : Fragment() {
 
-    private lateinit var homeViewModel: HomeViewModel
+    private lateinit var calculatorVM: CalculatorVM
     private var _binding: FragmentHomeBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        homeViewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+        calculatorVM = ViewModelProvider(this).get(CalculatorVM::class.java)
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
